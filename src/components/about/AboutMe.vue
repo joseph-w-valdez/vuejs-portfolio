@@ -6,12 +6,22 @@ export default {
 				{
 					id: 1,
 					bio:
-						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+						"I am a software engineer in Southern California. I'd love to contribute to any projects and applications that have a positive impact on the community.",
 				},
 				{
 					id: 2,
 					bio:
-						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+						"Before entering the tech industry, I worked in the healthcare field for several years. Over this time, I gained a strong work ethic, with great admiration for the strong teamwork, coordination, and problem-solving that it entailed. I was introduced to the software development world by friends who suggested it due to its similarities to the medical field in the ways that I loved it.",
+				},
+				{
+					id: 3,
+					bio:
+						"After months of soul-searching, self-studying, and research into the field, I decided to delve into it further and immerse myself in a boot camp program, and I have continued loving it since!",
+				},
+				{
+					id: 4,
+					bio:
+						"I'm excited to keep moving forward in this industry and solving problems with a like-minded group of teammates and continuing this path of ongoing growth!",
 				},
 			],
 		};
@@ -24,7 +34,7 @@ export default {
 		<!-- About profile image -->
 		<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 			<img
-				src="@/assets/images/profile.jpeg"
+				src="@/assets/images/profile.jpg"
 				class="rounded-xl w-96"
 				alt=""
 			/>

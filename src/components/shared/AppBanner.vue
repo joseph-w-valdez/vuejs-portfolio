@@ -9,11 +9,11 @@ export default {
 		};
 	},
 	created() {
-		this.theme = localStorage.getItem('theme') || 'light';
+		this.theme = localStorage.getItem('theme') || 'dark';
 	},
 	mounted() {
 		feather.replace();
-		this.theme = localStorage.getItem('theme') || 'light';
+		this.theme = localStorage.getItem('theme') || 'dark';
 	},
 	updated() {
 		feather.replace();
@@ -31,17 +31,17 @@ export default {
 			<h1
 				class="font-general-semibold text-3xl md:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 			>
-				Hi, Iam Stoman
+				Hi, I'm Joseph!
 			</h1>
 			<p
 				class="font-general-medium mt-2 text-lg sm:text-xl  xl:text-2xl text-center sm:text-left leading-none text-gray-400"
 			>
-				A Full-Stack Developer & Design Enthusiast
+				Full-Stack Web Developer
 			</p>
 			<div class="flex justify-center sm:block">
 				<a
-					download="Stoman-Resume.pdf"
-					href="/files/Stoman-Resume.pdf"
+					download="Joseph Valdez - Resume.pdf"
+					href="/files/Joseph Valdez - Resume.pdf"
 					class="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
 					aria-label="Download Resume"
 				>

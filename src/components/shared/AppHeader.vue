@@ -21,22 +21,17 @@ export default {
 				{
 					id: 1,
 					value: 'web',
-					name: 'Web Application',
+					name: 'Web Applications',
 				},
 				{
 					id: 2,
 					value: 'mobile',
-					name: 'Mobile Application',
+					name: 'Mobile Applications',
 				},
 				{
 					id: 3,
 					value: 'ui-ux',
 					name: 'UI/UX Design',
-				},
-				{
-					id: 4,
-					value: 'branding',
-					name: 'Branding & Anim',
 				},
 			],
 		};
@@ -87,13 +82,13 @@ export default {
 					<router-link to="/"
 						><img
 							v-if="theme === 'light'"
-							src="@/assets/images/logo-dark.svg"
+							src="@/assets/images/logo-dark.png"
 							class="w-36"
 							alt="Dark Logo"
 						/>
 						<img
 							v-else
-							src="@/assets/images/logo-light.svg"
+							src="@/assets/images/logo-light.png"
 							class="w-36"
 							alt="Light Logo"
 						/>
