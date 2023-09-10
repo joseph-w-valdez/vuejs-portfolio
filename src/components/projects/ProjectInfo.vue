@@ -6,7 +6,6 @@ export default {
 
 	mounted() {
 		feather.replace();
-		console.log(this.projectInfo)
 	},
 	updated() {
 		feather.replace();
