@@ -22,11 +22,7 @@ export default {
         info: {
           clientHeading: '',
           links: [],
-          objectivesHeading: '',
-          objectivesDetails: '',
           technologies: [],
-          projectDetailsHeading: '',
-          projectDetails: [],
         },
       },
     };
@@ -51,23 +47,17 @@ export default {
           {
             id: 1,
             title: 'Live Link',
-            details: project.liveLink,
+            link: project.liveLink,
           },
           {
-            id: 3,
+            id: 2,
             title: 'Repository',
-            details: project.repoLink,
+            link: project.repoLink,
           },
         ];
-        this.projectDetails.info.objectivesHeading = 'Objective';
-        this.projectDetails.info.objectivesDetails = project.objectives;
-
-        this.projectDetails.info.technologies = project.technologies
-
-        this.projectDetails.info.projectDetails.push({
-          id: 1,
-          details: project.challenge,
-        });
+        this.projectDetails.info.objectives = project.objectives;
+        this.projectDetails.info.technologies = project.technologies;
+        this.projectDetails.info.challenges = project.challenges;
       }
     },
   },

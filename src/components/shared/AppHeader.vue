@@ -21,12 +21,12 @@ export default {
 				{
 					id: 1,
 					value: 'web',
-					name: 'Web Applications',
+					name: 'Web Application',
 				},
 				{
 					id: 2,
 					value: 'mobile',
-					name: 'Mobile Applications',
+					name: 'Mobile Application',
 				},
 				{
 					id: 3,

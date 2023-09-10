@@ -1,6 +1,9 @@
 <script>
 export default {
 	props: ['singleProjectHeader'],
+	mounted() {
+		console.log(this.singleProjectHeader)
+	}
 };
 </script>
 
@@ -30,7 +33,7 @@ export default {
 				></i>
 				<span
 					class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-					>{{ singleProjectHeader.singleProjectTag }}</span
+					>{{ singleProjectHeader.category }}</span
 				>
 			</div>
 		</div>

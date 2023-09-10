@@ -1,9 +1,6 @@
 <script>
 export default {
 	props: ['projectImages'],
-	mounted() {
-		console.log(this.projectImages)
-	}
 };
 </script>
 
