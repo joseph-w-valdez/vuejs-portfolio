@@ -58,16 +58,11 @@ export default {
 		</div>
 
 		<!-- Banner right illustration -->
-		<div class="w-full md:w-2/3 text-right float-right">
+		<div class="flex justify-center items-center w-full md:w-2/3 text-right float-right">
 			<img
-				v-if="theme === 'light'"
-				src="@/assets/images/developer.svg"
-				alt="Developer"
-			/>
-			<img
-				v-else
-				src="@/assets/images/developer-dark.svg"
-				alt="Developer"
+				src="@/assets/images/profile.jpg"
+				alt="Profile Picture"
+				class='rounded-xl mt-8 shadow-xl'
 			/>
 		</div>
 	</section>

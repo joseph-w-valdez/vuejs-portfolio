@@ -17,10 +17,7 @@ export default {
 </script>
 
 <template>
-	<div
-		class="container mx-auto justify-center flex flex-col-reverse md:flex-row py-5 md:py-10 md:mt-10"
-	>
-		<!-- Contact form -->
+	<div class="container mx-auto justify-center flex flex-col-reverse md:flex-row py-5 md:py-10 md:mt-10" >
 		<ContactForm />
 	</div>
 </template>

@@ -19,7 +19,7 @@ export default {
       <p class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2 group-hover:text-white">
         {{ project.title }}
       </p>
-      <span class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light group-hover:text-white">{{ project.category }}</span>
+      <span class="font-general-medium text-lg text-ternary-dark dark:text-ternary-light group-hover:text-white">{{ project.categories[0] }}</span>
     </div>
   </router-link>
 </template>

@@ -36,7 +36,7 @@ export default {
 			<img
 				src="@/assets/images/profile.jpg"
 				class="rounded-xl w-96"
-				alt=""
+				alt="Profile Picture"
 			/>
 		</div>
 

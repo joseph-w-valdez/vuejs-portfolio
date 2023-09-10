@@ -23,7 +23,7 @@ export default { components: { Button, FormInput, FormTextarea } };
 					inputType="email"
 				/>
 				<FormInput label="Subject" inputIdentifier="subject" />
-				<FormTextarea label="Message" textareaIdentifier="message" />
+				<FormTextarea class='min-h-[50px]' label="Message" textareaIdentifier="message" />
 
 				<div>
 					<Button

@@ -2,7 +2,7 @@
 export default {
 	props: ['singleProjectHeader'],
 	mounted() {
-		console.log(this.singleProjectHeader)
+		console.log(this.singleProjectHeader.categories)
 	}
 };
 </script>
@@ -31,9 +31,9 @@ export default {
 					data-feather="tag"
 					class="w-4 h-4 text-ternary-dark dark:text-ternary-light"
 				></i>
-				<span
-					class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-					>Category: {{ singleProjectHeader.category }}</span
+				<span class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light">
+					Categories: {{ singleProjectHeader.categories && singleProjectHeader.categories.length ? singleProjectHeader.categories.join(',  ') : 'No categories specified' }}
+					</span
 				>
 			</div>
 		</div>
