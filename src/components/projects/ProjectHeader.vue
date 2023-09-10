@@ -31,7 +31,7 @@ export default {
 					data-feather="tag"
 					class="w-[16px] h-[16px] text-ternary-dark dark:text-ternary-light"
 				></i>
-				<span class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light">
+				<span class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light w-1/2 sm:w-fit">
 					Categories: {{ singleProjectHeader.categories && singleProjectHeader.categories.length ? singleProjectHeader.categories.join(',  ') : 'No categories specified' }}
 					</span
 				>
