@@ -36,7 +36,7 @@ const projects = [
 		id: 3,
 		title: 'Olive Garden Fanpage (actively in development)',
 		date: '7/23',
-		category: 'Web Design',
+		category: 'Web Applications',
 		thumbnail: require('@/assets/images/ui-project-1.jpg'),
 		liveLink: 'https://example.com/olivegarden',
 		repoLink: 'https://github.com/example/olivegarden',

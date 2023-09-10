@@ -1,8 +1,6 @@
 <script>
 import feather from 'feather-icons';
 import ProjectHeader from '../components/projects/ProjectHeader.vue';
-import ProjectGallery from '../components/projects/ProjectGallery.vue';
-import ProjectInfo from '../components/projects/ProjectInfo.vue';
 import projectsData from '../data/projects'
 
 export default {
@@ -10,8 +8,6 @@ export default {
   props: ['project'],
   components: {
     ProjectHeader,
-    ProjectGallery,
-    ProjectInfo,
   },
   data() {
     return {
@@ -37,12 +33,11 @@ export default {
   mounted() {
     feather.replace();
     this.projectId = Number(this.$route.params.projectId);
-
   },
   methods: {
     fetchProjectDetails() {
       const project = projectsData.find((item) => item.id === this.projectId);
-      console.log(project)
+
       if (project) {
         this.projectDetails.header = { ...project };
         this.projectDetails.images = project.images;
@@ -65,7 +60,6 @@ export default {
             details: project.repoLink,
           },
         ];
-
         this.projectDetails.info.objectivesHeading = 'Objective';
         this.projectDetails.info.objectivesDetails = project.objectives;
 
@@ -83,3 +77,9 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="container mx-auto mt-10 sm:mt-20">
+    <ProjectHeader :singleProjectHeader="projectDetails.header" />
+  </div>
+</template>
