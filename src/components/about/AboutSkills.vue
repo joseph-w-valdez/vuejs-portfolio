@@ -1,18 +1,12 @@
 <script>
 import skills from '../../data/skills';
-import projects from '../../data/projects';
 
 export default {
   data: () => {
     return {
       skills,
-      projects
     };
   },
-  mounted() {
-    console.log(projects);
-    console.log(skills)
-  }
 }
 </script>
 

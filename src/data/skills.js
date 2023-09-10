@@ -20,7 +20,7 @@ const skills = [
   {
     id: 4,
     title: 'Next 13',
-    logo: 'https://willstenzel.com/tools/nextjs-dark.png',
+    logo: 'https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/nextjs/nextjs-original.svg',
     website: 'https://nextjs.org/'
   },
   {
