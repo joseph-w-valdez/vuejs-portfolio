@@ -2,7 +2,7 @@ const projects = [
 	{
 		id: 1,
 		title: 'ValoChecker',
-		date: '6/23',
+		date: '6/2023',
 		category: 'Web Application',
 		thumbnail: require('@/assets/images/web-project-2.jpg'),
 		liveLink: 'https://valochecker.app/',
@@ -19,7 +19,7 @@ const projects = [
 	{
 		id: 2,
 		title: 'Marvelous',
-		date: '12/22',
+		date: '3/2023',
 		category: 'Web Application',
 		thumbnail: require('@/assets/images/mobile-project-2.jpg'),
 		liveLink: 'https://marvelous.herokuapp.com/',
@@ -35,7 +35,7 @@ const projects = [
 	{
 		id: 3,
 		title: 'Olive Garden Fanpage (actively in development)',
-		date: '7/23',
+		date: '7/2023',
 		category: 'Web Application',
 		thumbnail: require('@/assets/images/ui-project-1.jpg'),
 		liveLink: 'https://olive-garden-fanpage.vercel.app/',
@@ -51,10 +51,10 @@ const projects = [
 	{
 		id: 4,
 		title: 'ChatApp',
-		date: '8/23',
-		category: 'Mobile Applications',
+		date: '8/2023',
+		category: 'Mobile Application',
 		thumbnail: require('@/assets/images/ui-project-2.jpg'),
-		liveLink: 'https://example.com/chatapp',
+		liveLink: null,
 		repoLink: 'https://github.com/example/chatapp',
 		objectives: 'Developed a real-time chat application for seamless communication between users on various platforms. The primary goal was to create a user-friendly, cross-platform messaging experience that prioritizes privacy and security.',
 		technologies: ['React Native', 'Firebase', 'Socket.io'],

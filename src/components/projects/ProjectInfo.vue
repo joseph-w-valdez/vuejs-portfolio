@@ -31,12 +31,13 @@ export default {
 								class="font-general-regular text-ternary-dark dark:text-ternary-light"
 						>
 								<span class="block text-base italic">{{ info.title }}: </span>
-								<a
-										:href="info.link"
-										class="hover:underline cursor-pointer block text-md"
-										aria-label="Project Website and Repository"
-										target="__blank"
-								>{{ info.link }}</a>
+								<!-- Render a <p> if the link is unavailable, otherwise render an <a> tag for linking-->
+								<template v-if="info.link">
+									<a :href="info.link" class="hover:underline cursor-pointer block text-md" aria-label="Project Website and Repository" target="__blank">{{ info.link }}</a>
+								</template>
+								<template v-else>
+									<p class="text-md">None Available</p>
+								</template>
 						</li>
 				</ul>
 		</div>
