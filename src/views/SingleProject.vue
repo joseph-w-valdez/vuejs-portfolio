@@ -1,6 +1,8 @@
 <script>
 import feather from 'feather-icons';
 import ProjectHeader from '../components/projects/ProjectHeader.vue';
+import ProjectGallery from '../components/projects/ProjectGallery.vue';
+import ProjectInfo from '../components/projects/ProjectInfo.vue';
 import projectsData from '../data/projects'
 
 export default {
@@ -8,6 +10,8 @@ export default {
   props: ['project'],
   components: {
     ProjectHeader,
+    ProjectGallery,
+    ProjectInfo,
   },
   data() {
     return {
@@ -17,7 +21,7 @@ export default {
         images: [],
         info: {
           clientHeading: '',
-          companyInfos: [],
+          links: [],
           objectivesHeading: '',
           objectivesDetails: '',
           technologies: [],
@@ -43,14 +47,9 @@ export default {
         this.projectDetails.images = project.images;
 
         this.projectDetails.info.clientHeading = 'About Client';
-        this.projectDetails.info.companyInfos = [
+        this.projectDetails.info.links = [
           {
             id: 1,
-            title: 'Services',
-            details: project.liveLink,
-          },
-          {
-            id: 2,
             title: 'Live Link',
             details: project.liveLink,
           },
@@ -63,10 +62,7 @@ export default {
         this.projectDetails.info.objectivesHeading = 'Objective';
         this.projectDetails.info.objectivesDetails = project.objectives;
 
-        this.projectDetails.info.technologies.push({
-          title: 'Tools & Technologies',
-          techs: project.technologies,
-        });
+        this.projectDetails.info.technologies = project.technologies
 
         this.projectDetails.info.projectDetails.push({
           id: 1,
@@ -81,5 +77,7 @@ export default {
 <template>
   <div class="container mx-auto mt-10 sm:mt-20">
     <ProjectHeader :singleProjectHeader="projectDetails.header" />
+    <ProjectGallery :projectImages="projectDetails.images" />
+    <ProjectInfo :projectInfo="projectDetails.info" />
   </div>
 </template>

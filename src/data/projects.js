@@ -8,7 +8,7 @@ const projects = [
 		liveLink: 'https://valochecker.app/',
 		repoLink: 'https://github.com/joseph-w-valdez/Valorant-Checker',
 		objectives: 'To show up-to-date Valorant data without needing to download the game or scrub through YouTube videos.',
-		technologies: 'React',
+		technologies: ['React'],
 		challenge: 'This code was originally my first large project built in ES5 and step-by-step AJAX, and I chose to revamp it with cleaner, modern code using React, alongside more features.',
 		images: [
 			require('@/assets/images/web-project-2.jpg'),
@@ -25,7 +25,7 @@ const projects = [
 		liveLink: 'https://example.com/marvelous',
 		repoLink: 'https://github.com/example/marvelous',
 		objectives: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		technologies: 'Vue.js',
+		technologies: ['Vue.js'],
 		challenge: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
 		images: [
 			require('@/assets/images/web-project-2.jpg'),
@@ -41,7 +41,7 @@ const projects = [
 		liveLink: 'https://example.com/olivegarden',
 		repoLink: 'https://github.com/example/olivegarden',
 		objectives: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		technologies: 'HTML/CSS',
+		technologies: ['HTML/CSS', 'React', 'Vercel'],
 		challenge: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
 		images: [
 			require('@/assets/images/web-project-2.jpg'),
@@ -57,7 +57,7 @@ const projects = [
 		liveLink: 'https://example.com/chatapp',
 		repoLink: 'https://github.com/example/chatapp',
 		objectives: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		technologies: 'React Native',
+		technologies: ['React Native'],
 		challenge: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
 		images: [
 			require('@/assets/images/web-project-2.jpg'),

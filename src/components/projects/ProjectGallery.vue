@@ -1,6 +1,9 @@
 <script>
 export default {
 	props: ['projectImages'],
+	mounted() {
+		console.log(this.projectImages)
+	}
 };
 </script>
 
@@ -12,7 +15,7 @@ export default {
 			:key="projectImage.id"
 		>
 			<img
-				:src="projectImage.img"
+				:src="projectImage"
 				class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
 				alt="{{ projectImage.title }}"
 			/>

@@ -6,6 +6,7 @@ export default {
 
 	mounted() {
 		feather.replace();
+		console.log(this.projectInfo)
 	},
 	updated() {
 		feather.replace();
@@ -26,18 +27,14 @@ export default {
 				</p>
 				<ul class="leading-loose">
 					<li
-						v-for="info in projectInfo.companyInfos"
+						v-for="info in projectInfo.links"
 						:key="info"
 						class="font-general-regular text-ternary-dark dark:text-ternary-light"
 					>
 						<span>{{ info.title }}: </span>
 						<a
 							href="#"
-							:class="
-								info.title == 'Website' || info.title == 'Phone'
-									? 'hover:underline cursor-pointer'
-									: ''
-							"
+							class="hover:underline cursor-pointer"
 							aria-label="Project Website and Phone"
 							>{{ info.details }}</a
 						>
@@ -64,12 +61,12 @@ export default {
 				<p
 					class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
 				>
-					{{ projectInfo.technologies[0].title }}
+					Tools and Technologies
 				</p>
 				<p
 					class="font-general-regular text-primary-dark dark:text-ternary-light"
 				>
-					{{ projectInfo.technologies[0].techs.join(', ') }}
+					{{ projectInfo.technologies && projectInfo.technologies.length ? projectInfo.technologies.join(', ') : 'No technologies specified' }}
 				</p>
 			</div>
 
