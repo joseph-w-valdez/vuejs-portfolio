@@ -1,11 +1,11 @@
 <template>
   <div class="container mx-auto">
-    <section class="text-center text-white">
+    <section class="text-center text-ternary-dark dark:text-ternary-light">
       <p class="font-general-semibold text-2xl sm:text-5xl font-semibold mb-2 text-ternary-dark dark:text-ternary-light mb-8">
         Qualifications
       </p>
 
-      <div class="qualification border-2 border-white max-w-80 border-opacity-100 rounded-2xl p-5 md:mx-20 my-[15px] transition duration-400 bg-opacity-40 hover:bg-[#1c3255] text-start">
+      <div class="qualification border-2 border-ternary-dark dark:border-white max-w-80 border-opacity-100 rounded-2xl p-5 md:mx-20 my-[15px] transition duration-400 bg-opacity-40 hover:bg-[#1c3255] text-start">
         <a class="qualification-link" href="https://learningfuze.com/" target="_blank" rel="noopener noreferrer">
           <div class="title-logo-container flex w-full flex-col items-start gap-4 mb-8">
             <div class="logo-frame">
@@ -13,7 +13,7 @@
             </div>
             <div>
               <h3 class="qualification-title mb-1">LearningFuze</h3>
-              <h6 class="qualification-date text-gray-300">
+              <h6 class="qualification-date text-gray-500 dark:text-gray-300">
                 Nov 2022 - Mar 2023
               </h6>
             </div>
@@ -44,7 +44,7 @@
         </a>
       </div>
 
-      <div class="qualification border-2 border-white max-w-80 border-opacity-100 rounded-2xl p-5 md:mx-20 my-[15px] transition duration-400 bg-opacity-40 hover:bg-[#1c3255] text-start">
+      <div class="qualification border-2 border-ternary-dark dark:border-white max-w-80 border-opacity-100 rounded-2xl p-5 md:mx-20 my-[15px] transition duration-400 bg-opacity-40 hover:bg-[#1c3255] text-start">
         <a class="qualification-link" href="https://www.linkedin.com/in/joseph-w-valdez/details/recommendations/" target="_blank" rel="noopener noreferrer">
           <div class="title-logo-container flex w-full flex-col items-start gap-4 mb-8">
             <div class="logo-frame">
@@ -52,8 +52,8 @@
             </div>
             <div>
               <h3 class="qualification-title mb-1">Robert Gardner, Ph.D</h3>
-              <h4 class="qualification-role text-gray-300">Software Development Instructor</h4>
-              <h6 class="qualification-date text-gray-300">March 22, 2023, Robert was Joseph's teacher</h6>
+              <h4 class="qualification-role text-gray-500 dark:text-gray-300">Software Development Instructor</h4>
+              <h6 class="qualification-date text-gray-500 dark:text-gray-300">March 22, 2023, Robert was Joseph's teacher</h6>
             </div>
           </div>
           <p class="qualification-description">I taught Joseph at LearningFuze, where Joseph learned full stack development with React, Node, and PostgreSQL. This was an intense course that required Joseph to write a full stack application on his own.</p>
