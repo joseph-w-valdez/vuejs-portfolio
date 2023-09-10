@@ -1,9 +1,6 @@
 <script>
 export default {
 	props: ['singleProjectHeader'],
-	mounted() {
-		console.log(this.singleProjectHeader.categories)
-	}
 };
 </script>
 
