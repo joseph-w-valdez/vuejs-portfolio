@@ -1,11 +1,11 @@
 <script>
 import feather from 'feather-icons';
 import ProjectsFilter from './ProjectsFilter.vue';
-import ProjectSingle from './ProjectSingle.vue';
+import ProjectSingleTile from './ProjectSingleTile.vue';
 import projects from '../../data/projects';
 
 export default {
-	components: { ProjectSingle, ProjectsFilter },
+	components: { ProjectSingleTile, ProjectsFilter },
 	data: () => {
 		return {
 			projects,
@@ -67,7 +67,7 @@ export default {
           <span class="hidden sm:block bg-primary-light dark:bg-ternary-dark p-2.5 shadow-sm rounded-xl cursor-pointer">
             <i data-feather="search" class="text-ternary-dark dark:text-ternary-light"></i>
           </span>
-          <input v-model="searchProject" class="font-general-medium pl-3 pr-1 sm:px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light" id="name" name="name" type="search" required="" placeholder="Search Projects" aria-label="Name" />
+          <input v-model="searchProject" class="font-general-medium pl-3 pr-1 max-w-[150px] sm:max-w-none sm:px-4 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light" id="name" name="name" type="search" required="" placeholder="Search Projects" aria-label="Name" />
         </div>
         <ProjectsFilter @filter="selectedCategory = $event" />
       </div>
@@ -75,13 +75,12 @@ export default {
 
     <!-- Projects grid with clickable links -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-    <!-- Wrap each ProjectSingle component with router-link -->
     <router-link
       v-for="project in filteredProjects"
       :key="project.id"
       :to="'/projects/' + project.id"
     >
-      <ProjectSingle :project="project" />
+      <ProjectSingleTile :project="project" />
     </router-link>
   </div>
   </section>
