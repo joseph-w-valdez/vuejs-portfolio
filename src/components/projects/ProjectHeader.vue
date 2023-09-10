@@ -23,7 +23,7 @@ export default {
 				></i>
 				<span
 					class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-					>{{ singleProjectHeader.date }}</span
+					>Published: {{ singleProjectHeader.date }}</span
 				>
 			</div>
 			<div class="flex items-center">
@@ -33,7 +33,7 @@ export default {
 				></i>
 				<span
 					class="font-general-medium ml-2 leading-none text-primary-dark dark:text-primary-light"
-					>{{ singleProjectHeader.category }}</span
+					>Category: {{ singleProjectHeader.category }}</span
 				>
 			</div>
 		</div>

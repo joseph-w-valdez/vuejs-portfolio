@@ -34,7 +34,7 @@ const projects = [
 	},
 	{
 		id: 3,
-		title: 'Olive Garden Fanpage (actively in development)',
+		title: 'Olive Garden Fanpage (in development)',
 		date: '7/2023',
 		category: 'Web Application',
 		thumbnail: require('@/assets/images/ui-project-1.jpg'),
