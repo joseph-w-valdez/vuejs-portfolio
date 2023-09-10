@@ -28,8 +28,8 @@ const projects = [
 		technologies: ['React', 'TypeScript', 'Next.js 13', 'Tailwind CSS', 'Material UI','Google Maps'],
 		challenges: 'Led a development team to build an Olive Garden fanpage using Next.js 13, TypeScript, and Tailwind. Oversaw project management, including planning, daily standups, code reviews, and task allocation. Designed a custom API with hand-crafted endpoints for efficient data delivery and frontend functionality. Implemented secure user authentication and data tracking using Firebase and MongoDB.',
 		images: [
-			require('@/assets/images/web-project-2.jpg'),
-			require('@/assets/images/web-project-2.jpg'),
+			require('@/assets/images/valdezeyecenter-1.gif'),
+			require('@/assets/images/valdezeyecenter-2.gif'),
 		],
 	},
 	{
@@ -44,8 +44,9 @@ const projects = [
 		technologies: ['JavaScript ES6', 'Node.js', 'Express.js', 'Tailwind CSS', 'Axios', 'Multer', 'PostgreSQL'],
 		challenges: 'Led a development team to build an Olive Garden fanpage using Next.js 13, TypeScript, and Tailwind. Oversaw project management, including planning, daily standups, code reviews, and task allocation. Designed a custom API with hand-crafted endpoints for efficient data delivery and frontend functionality. Implemented secure user authentication and data tracking using Firebase and MongoDB.',
 		images: [
-			require('@/assets/images/web-project-2.jpg'),
-			require('@/assets/images/web-project-2.jpg'),
+			require('@/assets/images/marvelous-1.gif'),
+			require('@/assets/images/marvelous-2.gif'),
+			require('@/assets/images/marvelous-3.gif'),
 		],
 	},
 	{
@@ -60,8 +61,8 @@ const projects = [
 		technologies: ['React', 'TypeScript', 'Next.js 13','Tailwind CSS', 'Vercel', 'Firebase', 'MongoDB', 'Google Maps API'],
 		challenges: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		images: [
-			require('@/assets/images/web-project-2.jpg'),
-			require('@/assets/images/web-project-2.jpg'),
+			require('@/assets/images/olive-garden-fanpage-1.gif'),
+			require('@/assets/images/olive-garden-fanpage-2.gif'),
 		],
 	},
 	{

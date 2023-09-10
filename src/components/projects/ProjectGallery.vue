@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-	<div class="flex justify-evenly sm:grid-cols-3 sm:gap-10 mt-12">
+	<div class="flex flex-col sm:flex-row sm:justify-evenly sm:gap-10 mt-12">
 		<div
-			class="mb-10 sm:mb-0"
+			class="mb-10 sm:mb-0 w-full flex justify-center"
 			v-for="projectImage in projectImages"
 			:key="projectImage.id"
 		>

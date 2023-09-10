@@ -42,7 +42,7 @@ export default {
         this.projectDetails.header = { ...project };
         this.projectDetails.images = project.images;
 
-        this.projectDetails.info.clientHeading = 'About Client';
+        this.projectDetails.info.clientHeading = 'Check It Out!';
         this.projectDetails.info.links = [
           {
             id: 1,
