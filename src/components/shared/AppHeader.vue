@@ -44,7 +44,6 @@ export default {
 		feather.replace();
 		this.theme = localStorage.getItem('theme') || 'light';
 
-
     // Add event listener to close the menu when clicking away from it
     document.addEventListener('click', this.closeMenuOnClickAway);
   },
