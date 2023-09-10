@@ -43,41 +43,49 @@ export default {
 	mounted() {
 		feather.replace();
 		this.theme = localStorage.getItem('theme') || 'light';
-	},
+
+
+    // Add event listener to close the menu when clicking away from it
+    document.addEventListener('click', this.closeMenuOnClickAway);
+  },
+  beforeUnmount() {
+    // Remove event listener when component is destroyed to prevent memory leaks
+    document.removeEventListener('click', this.closeMenuOnClickAway);
+  },
 	methods: {
-		updateTheme(theme) {
-			this.theme = theme;
-		},
-		showModal() {
-			if (this.modal) {
-				// Stop screen scrolling
-				document
-					.getElementsByTagName('html')[0]
-					.classList.remove('overflow-y-hidden');
-				this.modal = false;
-			} else {
-				document
-					.getElementsByTagName('html')[0]
-					.classList.add('overflow-y-hidden');
-				this.modal = true;
-			}
-		},
-	},
-	updated() {
-		feather.replace();
-	},
+    updateTheme(theme) {
+      this.theme = theme;
+    },
+    showModal() {
+      if (this.modal) {
+        // Stop screen scrolling
+        document
+          .getElementsByTagName('html')[0]
+          .classList.remove('overflow-y-hidden');
+        this.modal = false;
+      } else {
+        document
+          .getElementsByTagName('html')[0]
+          .classList.add('overflow-y-hidden');
+        this.modal = true;
+      }
+    },
+    closeMenuOnClickAway(event) {
+      if (this.isOpen && !this.$refs.hamburger.contains(event.target)) {
+        this.isOpen = false;
+      }
+    },
+  },
+  updated() {
+    feather.replace();
+  },
 };
 </script>
 
 <template>
 	<nav id="nav" class="sm:container sm:mx-auto">
-		<!-- Header start -->
-		<div
-			class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6"
-		>
-			<!-- Header menu links and small screen hamburger menu -->
+		<div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6" >
 			<div class="flex justify-between items-center px-4 sm:px-0">
-				<!-- Header logos -->
 				<div>
 					<router-link to="/"
 						><img
@@ -109,6 +117,7 @@ export default {
 						type="button"
 						class="focus:outline-none"
 						aria-label="Hamburger Menu"
+						ref='hamburger'
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
