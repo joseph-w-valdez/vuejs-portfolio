@@ -12,6 +12,11 @@ export default {
 				'Web Application',
 				'Mobile Application',
 				'UI/UX Design',
+				'Completed',
+				'In Development',
+				'Professional Freelance',
+				'Personal Project',
+				'Collaboration Project',
 			],
 		},
 	},
@@ -24,7 +29,7 @@ export default {
 		:name="select"
 		:id="select"
 		class="font-general-medium
-				px-6
+				px-4
 				py-2
 				border-1 border-gray-200
 				dark:border-secondary-dark

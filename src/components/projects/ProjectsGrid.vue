@@ -15,7 +15,6 @@ export default {
 		};
 	},
 	computed: {
-		// Get the filtered projects
 		filteredProjects() {
 			if (this.selectedCategory) {
 				return this.filterProjectsByCategory();
@@ -26,16 +25,11 @@ export default {
 		},
 	},
 	methods: {
-		// Filter projects by category
 		filterProjectsByCategory() {
 			return this.projects.filter((item) => {
-				let category =
-					item.category.charAt(0).toUpperCase() +
-					item.category.slice(1);
-				return category.includes(this.selectedCategory);
-			});
+      return item.categories.includes(this.selectedCategory);
+    });
 		},
-		// Filter projects by title search
 		filterProjectsBySearch() {
 			let project = new RegExp(this.searchProject, 'i');
 			return this.projects.filter((el) => el.title.match(project));
@@ -48,16 +42,13 @@ export default {
 </script>
 
 <template>
-  <!-- Projects grid -->
   <section class="pt-10 sm:pt-14">
-    <!-- Projects grid title -->
     <div class="text-center">
       <p class="font-general-semibold text-2xl sm:text-5xl font-semibold mb-2 text-ternary-dark dark:text-ternary-light">
         {{ projectsHeading }}
       </p>
     </div>
 
-    <!-- Filter and search projects -->
     <div class="mt-10 sm:mt-10">
       <h3 class="font-general-regular text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl font-normal mb-4">
         Search projects by title or filter by category
@@ -73,7 +64,6 @@ export default {
       </div>
     </div>
 
-    <!-- Projects grid with clickable links -->
     <div class="justify-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 gap-6 sm:gap-10">
     <router-link
       v-for="project in filteredProjects"
