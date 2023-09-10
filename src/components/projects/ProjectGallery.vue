@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-	<div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+	<div class="flex justify-evenly sm:grid-cols-3 sm:gap-10 mt-12">
 		<div
 			class="mb-10 sm:mb-0"
 			v-for="projectImage in projectImages"
@@ -13,7 +13,7 @@ export default {
 		>
 			<img
 				:src="projectImage"
-				class="rounded-xl shadow-lg sm:shadow-none"
+				class="rounded-xl shadow-lg sm:shadow-none max-h-[350px]"
 				alt="{{ projectImage.title }}"
 			/>
 		</div>
