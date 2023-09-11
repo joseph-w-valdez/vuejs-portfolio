@@ -48,7 +48,6 @@ export default {
         {{ projectsHeading }}
       </p>
     </div>
-
     <div class="mt-10 sm:mt-10">
       <h3 class="font-general-regular text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl font-normal mb-4">
         Search projects by title or filter by category
