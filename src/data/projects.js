@@ -77,9 +77,7 @@ const projects = [
 		technologies: ['React Native', 'Firebase', 'Socket.io'],
 		challenges: "Faced the challenge of implementing real-time messaging functionality using WebSocket technology and ensuring data security. Additionally, optimized the app's performance for smooth user interactions and responsiveness.",
 		images: [
-			require('@/assets/images/web-project-2.jpg'),
-			require('@/assets/images/web-project-2.jpg'),
-			require('@/assets/images/web-project-2.jpg'),
+			require('@/assets/images/chatApp-1.gif'),
 		],
 	},
 ];
