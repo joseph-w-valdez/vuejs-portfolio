@@ -17,10 +17,6 @@
         thinking. Much like coding, competitive gaming demands focus, discipline, and a constant drive to improve, making it an exhilarating complement to my
         technical pursuits.
       </p>
-      <p class="font-general-regular mb-4 text-ternary-dark dark:text-ternary-light text-lg">
-        These two facets of my life, digital art, and competitive gaming, provide a well-rounded perspective and inspire me to continue
-        exploring the boundaries of creativity and skill in both the digital and gaming realms.
-      </p>
     </div>
     <div class="w-full md:w-1/3 flex flex-col gap-4 justify-evenly items-center">
       <div class="w-2/3">
