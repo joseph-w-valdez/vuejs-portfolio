@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="flex-col sm:flex sm:gap-10 sm:mt-20 text-center justify-center">
-    <p class="font-general-semibold text-2xl sm:text-5xl font-semibold mb-2 text-ternary-dark dark:text-ternary-light mb-8">
+    <p class="font-general-semibold text-2xl sm:text-5xl font-semibold text-ternary-dark dark:text-ternary-light mb-8">
       Skills
     </p>
     <div class="skills-container flex flex-wrap justify-center gap-8">

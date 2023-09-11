@@ -35,6 +35,9 @@ export default {
 </script>
 
 <template>
+	<p class="font-general-semibold text-2xl sm:text-5xl font-semibold text-ternary-dark dark:text-ternary-light">
+      Bio
+  </p>
 	<div class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 		<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 			<img
