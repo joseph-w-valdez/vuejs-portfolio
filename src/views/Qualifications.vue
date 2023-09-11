@@ -68,6 +68,27 @@
         </a>
       </div>
 
+      <div class="group qualification border-2 border-[#6366F1] dark:border-white max-w-80 border-opacity-100 rounded-2xl p-5 md:mx-20 my-[15px] transition duration-400 bg-opacity-40 hover:bg-[#6366F1] text-start hover:text-white">
+        <a class="qualification-link" href="https://www.linkedin.com/in/joseph-w-valdez/details/recommendations/" target="_blank" rel="noopener noreferrer">
+          <div class="title-logo-container flex w-full flex-col items-start gap-4 mb-8">
+            <div class="logo-frame">
+              <img src="https://media.licdn.com/dms/image/D5603AQE1nWsG4aAdyA/profile-displayphoto-shrink_200_200/0/1683246940485?e=1700092800&v=beta&t=KnxHP3ynokbyeLh5iQw7bJAo5j_Rpm2DeZzh9Li8hGs" alt="Andreana Pettersen" class="w-24 h-24 rounded-2xl mr-4">
+            </div>
+            <div>
+              <h3 class="qualification-title mb-1">Andreana Pettersen</h3>
+              <h4 class="qualification-role text-gray-500 dark:text-gray-300 group-hover:text-gray-300">Career Services Manager</h4>
+              <h6 class="qualification-date text-gray-500 dark:text-gray-300 group-hover:text-gray-300">September 11, 2023, Andreana was Joseph's mentor</h6>
+            </div>
+          </div>
+          <p class="qualification-description">
+            I want to provide my highest recommendation to Joseph Valdez who has proven himself to be one of our top students at LearningFuze. Joseph has amazing technical
+            skills and has competed in final round interviews against Developers with advanced experience. Not only is Joseph a great developer, but I believe his experience
+            in the medical field has allowed him to gain valuable skills that are a major asset to working on a team. Joseph is hard working, creative, resourceful, driven,
+            handles pressure like a champ, and remains very positive with a can-do attitude. The work he has created after our program makes me proud!
+          </p>
+        </a>
+      </div>
+
     </section>
   </div>
 </template>

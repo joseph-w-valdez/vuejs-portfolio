@@ -8,7 +8,6 @@ export default {
 	components: {
 		AppBanner,
 		ProjectsGrid,
-		/* Button, */
 	},
 };
 </script>
