@@ -1,8 +1,10 @@
 <script>
+import AboutHobbies from './AboutHobbies.vue'
 import AboutSkills from './AboutSkills.vue'
 
 export default {
 	components: {
+		AboutHobbies,
 		AboutSkills,
 	},
 	setup() {
@@ -37,7 +39,7 @@ export default {
 <template>
 	<p class="font-general-semibold text-2xl sm:text-5xl font-semibold text-ternary-dark dark:text-ternary-light">
       Bio
-  </p>
+    </p>
 	<div class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 		<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 			<img
@@ -56,5 +58,6 @@ export default {
 			</p>
 		</div>
 	</div>
-<AboutSkills />
+	<AboutHobbies />
+	<AboutSkills />
 </template>
