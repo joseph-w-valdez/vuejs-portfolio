@@ -72,7 +72,7 @@ const projects = [
 		categories: ['Mobile Application', 'Completed', 'Collaboration Project'],
 		thumbnail: require('@/assets/images/mobile-project-2.jpg'),
 		liveLink: null,
-		repoLink: 'https://github.com/example/chatapp',
+		repoLink: 'https://github.com/joseph-w-valdez/react-native-chat',
 		objectives: 'Developed a real-time chat application for seamless communication between users on various platforms. The primary goal was to create a user-friendly, cross-platform messaging experience that prioritizes privacy and security.',
 		technologies: ['React Native', 'Firebase', 'Socket.io'],
 		challenges: "Faced the challenge of implementing real-time messaging functionality using WebSocket technology and ensuring data security. Additionally, optimized the app's performance for smooth user interactions and responsiveness.",
