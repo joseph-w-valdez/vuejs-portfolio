@@ -12,11 +12,14 @@ export default {
         subject: '',
         message: '',
       },
+      isSubmitting: false,
+      submitMessage: ''
     };
   },
    methods: {
     async onSubmit() {
       const { name, email, subject, message } = this.formData
+      this.isSubmitting = true;
       try {
         await submitForm({
           name,
@@ -24,9 +27,12 @@ export default {
           subject,
           message
         })
-        this.resetForm()
+        this.submitMessage = 'Email Sent!';
+        this.isSubmitting = false;
+        this.resetForm();
       } catch (error) {
-        console.error(error)
+        console.error(error);
+        this.submitMessage = 'Error sending email. Please try again.';
       }
     },
 
@@ -46,6 +52,8 @@ export default {
       <p class="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
         Contact Form
       </p>
+      <p v-if="submitMessage === 'Email Sent!'" class="text-green-500">Email Sent! Thank you!</p>
+      <p v-else-if="submitMessage === 'Error sending email. Please try again.'" class="text-red-500">Error sending email. Please try again.</p>
       <form @submit.prevent="onSubmit" class="font-general-regular space-y-7">
         <input
           label="Full Name"
@@ -90,11 +98,13 @@ export default {
         ></textarea>
         <div>
           <Button
-            title="Send Message"
+            :title="isSubmitting ? 'Please Wait...' : 'Send Message'"
             class="px-4 py-2.5 text-white tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg duration-500"
             type="submit"
             aria-label="Send Message"
-          />
+            :disabled="isSubmitting"
+          >
+          </Button>
         </div>
       </form>
     </div>
