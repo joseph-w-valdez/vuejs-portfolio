@@ -1,122 +1,158 @@
 <script>
 import feather from 'feather-icons';
 import Button from './reusable/Button.vue';
-import FormInput from './reusable/FormInput.vue';
-import FormTextarea from './reusable/FormTextarea.vue';
+
 export default {
-	props: ['showModal', 'modal', 'categories'],
-	components: { Button, FormInput, FormTextarea },
-	data() {
-		return {};
-	},
-	mounted() {
-		feather.replace();
-	},
-	updated() {
-		feather.replace();
-	},
-	methods: {},
+  props: ['showModal', 'modal', 'categories'],
+  components: { Button },
+  data() {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        project: '',
+        details: '',
+      },
+    };
+  },
+  mounted() {
+    feather.replace();
+  },
+  updated() {
+    feather.replace();
+  },
+  methods: {
+    submitForm() {
+      console.log('Form data:', this.formData);
+    },
+  },
 };
 </script>
 
 <template>
-	<transition name="fade">
-		<div v-show="modal" class="font-general-regular fixed inset-0 z-30">
-			<!-- Modal body background as backdrop -->
-			<div
-				v-show="modal"
-				@click="showModal()"
-				class="bg-filter bg-black bg-opacity-50 fixed inset-0 w-full h-full z-20"
-			></div>
-			<!-- Modal content -->
-			<main
-				class="flex flex-col items-center justify-center w-full h-full"
-			>
-				<transition name="fade-up-down">
-					<div
-						v-show="modal"
-						class="modal-wrapper flex items-center z-30"
-					>
-						<div
-							class="modal max-w-md mx-5 md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative"
-						>
-							<div
-								class="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark"
-							>
-								<h5
-									class="text-primary-dark dark:text-primary-light text-xl"
-								>
-									What project are you looking for?
-								</h5>
-								<button
-									class="px-4 text-primary-dark dark:text-primary-light"
-									@click="showModal()"
-								>
-									<i data-feather="x"></i>
-								</button>
-							</div>
-							<div class="modal-body p-5 w-full h-full overflow-y-scroll">
-								<form class="max-w-xl m-4 text-left">
-									<FormInput
-										label="Full Name"
-										inputIdentifier="name"
-										class="mb-2"
-									/>
-									<FormInput
-										label="Email"
-										inputIdentifier="email"
-										inputType="email"
-									/>
-
-									<div class="mt-6 mb-4">
-										<label
-											class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
-											for="project"
-											>Project Type</label
-										>
-										<select
-											class="w-full px-5 py-3 border-1 border-gray-200 dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-											id="project"
-											name="project"
-											type="text"
-											required=""
-											aria-label="Project Category"
-										>
-											<option
-												v-for="category in categories"
-												:key="category.id"
-												:value="category.value"
-											>
-												{{ category.name }}
-											</option>
-										</select>
-									</div>
-
-									<FormTextarea
-										label="Details"
-										textareaIdentifier="details"
-									/>
-
-									<div class="mt-7 pb-4 sm:pb-1">
-										<Button
-											title="Send Request"
-											class="px-4 sm:px-6 py-2 sm:py-2.5 text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
-											type="submit"
-											aria-label="Submit Request"
-										/>
-									</div>
-								</form>
-							</div>
-							<div
-								class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
-							>
-							</div>
-						</div>
-					</div>
-				</transition>
-			</main>
-		</div>
-	</transition>
+  <transition name="fade">
+    <div v-show="modal" class="font-general-regular fixed inset-0 z-30">
+      <!-- Modal body background as backdrop -->
+      <div
+        v-show="modal"
+        @click="showModal()"
+        class="bg-filter bg-black bg-opacity-50 fixed inset-0 w-full h-full z-20"
+      ></div>
+      <main class="flex flex-col items-center justify-center w-full h-full">
+        <transition name="fade-up-down">
+          <div
+            v-show="modal"
+            class="modal-wrapper flex items-center z-30"
+          >
+            <div class="modal max-w-md mx-5 md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
+              <div class="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
+                <h5 class="text-primary-dark dark:text-primary-light text-xl">
+                  What project are you looking for?
+                </h5>
+                <button
+                  class="px-4 text-primary-dark dark:text-primary-light"
+                  @click="showModal()"
+                >
+                  <i data-feather="x"></i>
+                </button>
+              </div>
+              <div class="modal-body p-5 w-full h-full overflow-y-scroll">
+                <form @submit.prevent="submitForm" class="max-w-xl m-4 text-left">
+                  <div class="mb-4">
+                    <label
+                      class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
+                      for="full-name"
+                    >
+                      Full Name
+                    </label>
+                    <input
+                      v-model="formData.name"
+                      id="full-name"
+                      inputIdentifier="name"
+                      name="full-name"
+                      placeholder="Full Name"
+                      class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+                      aria-label="Full Name"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
+                      for="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      v-model="formData.email"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address"
+                      inputType="email"
+                      class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+                      aria-label="Email"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
+                      for="project"
+                    >
+                      Project Type
+                    </label>
+                    <select
+                      v-model="formData.project"
+                      class="w-full px-5 py-3 border-1 border-gray-200 dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                      id="project"
+                      name="project"
+                      type="text"
+                      required=""
+                      aria-label="Project Category"
+                    >
+                      <option
+                        v-for="category in categories"
+                        :key="category.id"
+                        :value="category.value"
+                      >
+                        {{ category.name }}
+                      </option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
+                      for="details"
+                    >
+                      Details
+                    </label>
+                    <textarea
+                      v-model="formData.details"
+                      class="min-h-[50px] w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+                      id="details"
+                      name="details"
+                      placeholder="Details"
+                      aria-label="Details"
+                    ></textarea>
+                  </div>
+                  <div class="mt-7 pb-4 sm:pb-1">
+                    <Button
+                      title="Send Request"
+                      class="px-4 sm:px-6 py-2 sm:py-2.5 text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
+                      type="submit"
+                      aria-label="Submit Request"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div
+                class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
+              >
+              </div>
+            </div>
+          </div>
+        </transition>
+      </main>
+    </div>
+  </transition>
 </template>
 
 <style scoped>
