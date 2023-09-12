@@ -90,18 +90,17 @@ export default {
 						><img
 							v-if="theme === 'light'"
 							src="@/assets/images/logo-dark.png"
-							class="w-36"
+							class="w-36 hover:scale-105 duration-200"
 							alt="Dark Logo"
 						/>
 						<img
 							v-else
 							src="@/assets/images/logo-light.png"
-							class="w-36"
+							class="w-36 hover:scale-105 duration-200"
 							alt="Light Logo"
 						/>
 					</router-link>
 				</div>
-
 				<!-- Theme switcher small screen -->
 				<theme-switcher
 					:theme="theme"
@@ -139,33 +138,23 @@ export default {
 				</div>
 			</div>
 
-			<!-- Header links -->
 			<AppHeaderLinks :showModal="showModal" :isOpen="isOpen" />
-
-			<!-- Header right section buttons -->
-			<div
-				class="hidden sm:flex justify-between items-center flex-col md:flex-row"
-			>
-				<!-- Hire me button -->
+			<div class="hidden sm:flex justify-between items-center flex-col md:flex-row" >
 				<div class="hidden md:block">
 					<Button
 						title="Hire Me"
-						class="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+						class="text-md font-general-medium bg-indigo-500 hover:bg-primary-light text-white hover:text-[#6366F1] shadow-sm rounded-md px-5 py-2.5 duration-500"
 						@click="showModal()"
 						aria-label="Hire Me Button"
 					/>
 				</div>
-
-				<!-- Theme switcher large screen -->
 				<theme-switcher
 					:theme="theme"
 					@themeChanged="updateTheme"
-					class="ml-8 bg-primary-light dark:bg-ternary-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
+					class="ml-8 bg-primary-light dark:bg-ternary-dark hover:bg-[#6366F1] dark:hover:bg-[#6366F1] px-3 py-2 shadow-sm rounded-xl cursor-pointer duration-500 "
 				/>
 			</div>
 		</div>
-
-		<!-- Hire me modal -->
 		<HireMeModal
 			:showModal="showModal"
 			:modal="modal"

@@ -9,7 +9,7 @@ export default {
 <template>
   <router-link
     :to="`/projects/${project.id}`"
-    class="rounded-xl shadow-lg group cursor-pointer mb-10 sm:mb-0 relative"
+    class="rounded-xl shadow-lg group cursor-pointer mb-10 sm:mb-0 relative transition"
     aria-label="Single Project"
   >
     <div class='h-[260px] w-[260px] border-2 border-[#6366F1] dark:border-white rounded-tl-xl rounded-tr-xl border-b-0 overflow-hidden'>
@@ -19,7 +19,7 @@ export default {
         class="border-none object-cover w-full h-full"
       />
     </div>
-    <div class="text-center px-4 py-6 border-2 border-t-0 border-[#6366F1] dark:border-white rounded-b-xl shadow-lg bg-secondary-light dark:bg-ternary-dark group-hover:bg-[#6366F1] w-[260px]">
+    <div class="text-center px-4 py-6 border-2 border-t-0 border-[#6366F1] dark:border-white rounded-b-xl shadow-lg bg-secondary-light dark:bg-ternary-dark group-hover:bg-[#6366F1] w-[260px] duration-500">
       <p class="font-general-semibold text-xl text-ternary-dark dark:text-ternary-light font-semibold mb-2 group-hover:text-white">
         {{ project.title }}
       </p>
@@ -27,6 +27,7 @@ export default {
     </div>
   </router-link>
 </template>
+
 
 
 

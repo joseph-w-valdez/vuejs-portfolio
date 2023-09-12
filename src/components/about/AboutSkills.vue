@@ -15,11 +15,11 @@ export default {
     <p class="font-general-semibold text-2xl sm:text-5xl font-semibold text-ternary-dark dark:text-ternary-light mb-8">
       Skills
     </p>
-    <div class="skills-container flex flex-wrap justify-center gap-8">
+    <div class="skills-container flex flex-wrap justify-center gap-4 sm:gap-8">
       <a
         v-for="skill in skills"
         :key="skill.id"
-        class="skill text-ternary-dark dark:text-ternary-white no-underline border-2 border-[#6366F1] rounded-xl p-4 hover:bg-[#6366F1] hover:text-white"
+        class="skill text-ternary-dark dark:text-ternary-white no-underline border-2 border-[#6366F1] rounded-xl p-4 hover:bg-[#6366F1] hover:text-white duration-500"
         :href="skill.website"
         target="_blank"
         rel="noopener noreferrer"
