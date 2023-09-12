@@ -99,7 +99,7 @@ export default {
         <div>
           <Button
             :title="isSubmitting ? 'Please Wait...' : 'Send Message'"
-            class="px-4 py-2.5 text-white tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg duration-500"
+            class="px-4 py-2.5 text-white tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg hover:text-[#6366F1] hover:bg-white duration-500"
             type="submit"
             aria-label="Send Message"
             :disabled="isSubmitting"
