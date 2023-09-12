@@ -1,6 +1,7 @@
 <script>
 import feather from 'feather-icons';
 import Button from './reusable/Button.vue';
+import submitForm from '../utilities/formSubmission';
 
 export default {
   props: ['showModal', 'modal', 'categories'],
@@ -10,10 +11,22 @@ export default {
       formData: {
         name: '',
         email: '',
-        project: '',
-        details: '',
+        subject: '',
+        message: '',
       },
+      isSubmitting: false,
+      submitMessage: '',
     };
+  },
+  watch: {
+    // Watch the 'modal' prop for changes
+    modal(newVal, oldVal) {
+      if (!newVal && oldVal) {
+        // If the modal was closed, reset 'isSubmitting' to false
+        this.isSubmitting = false;
+        this.submitMessage = ''; // Reset the submitMessage as well
+      }
+    },
   },
   mounted() {
     feather.replace();
@@ -22,8 +35,29 @@ export default {
     feather.replace();
   },
   methods: {
-    submitForm() {
-      console.log('Form data:', this.formData);
+    async submitForm() {
+      if (this.isSubmitting) {
+        return;
+      }
+
+      this.isSubmitting = true;
+      try {
+        await submitForm(this.formData);
+        this.submitMessage = 'Email Sent!';
+        this.resetForm();
+      } catch (error) {
+        console.error(error);
+        this.submitMessage = 'Error sending email. Please try again.';
+      } finally {
+        this.isSubmitting = false;
+      }
+    },
+
+    resetForm() {
+      this.formData.name = '';
+      this.formData.email = '';
+      this.formData.subject = '';
+      this.formData.message = '';
     },
   },
 };
@@ -32,8 +66,7 @@ export default {
 <template>
   <transition name="fade">
     <div v-show="modal" class="font-general-regular fixed inset-0 z-30">
-      <!-- Modal body background as backdrop -->
-      <div
+           <div
         v-show="modal"
         @click="showModal()"
         class="bg-filter bg-black bg-opacity-50 fixed inset-0 w-full h-full z-20"
@@ -59,6 +92,8 @@ export default {
               <div class="modal-body p-5 w-full h-full overflow-y-scroll">
                 <form @submit.prevent="submitForm" class="max-w-xl m-4 text-left">
                   <div class="mb-4">
+                    <p v-if="submitMessage === 'Email Sent!'" class="text-green-500">Email Sent! Thank you!</p>
+                    <p v-else-if="submitMessage === 'Error sending email. Please try again.'" class="text-red-500">Error sending email. Please try again.</p>
                     <label
                       class="block mb-2 text-lg text-primary-dark dark:text-primary-light"
                       for="full-name"
@@ -73,6 +108,7 @@ export default {
                       placeholder="Full Name"
                       class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
                       aria-label="Full Name"
+                      required
                     />
                   </div>
                   <div class="mb-4">
@@ -90,6 +126,7 @@ export default {
                       inputType="email"
                       class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
                       aria-label="Email"
+                      required
                     />
                   </div>
                   <div class="mb-4">
@@ -100,7 +137,7 @@ export default {
                       Project Type
                     </label>
                     <select
-                      v-model="formData.project"
+                      v-model="formData.subject"
                       class="w-full px-5 py-3 border-1 border-gray-200 dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
                       id="project"
                       name="project"
@@ -125,27 +162,27 @@ export default {
                       Details
                     </label>
                     <textarea
-                      v-model="formData.details"
+                      v-model="formData.message"
                       class="min-h-[50px] w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
                       id="details"
                       name="details"
                       placeholder="Details"
                       aria-label="Details"
+                      required
                     ></textarea>
                   </div>
                   <div class="mt-7 pb-4 sm:pb-1">
                     <Button
-                      title="Send Request"
+                      :title="isSubmitting ? 'Please Wait...' : 'Send Message'"
                       class="px-4 sm:px-6 py-2 sm:py-2.5 text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
                       type="submit"
                       aria-label="Submit Request"
+                      :disabled="isSubmitting"
                     />
                   </div>
                 </form>
               </div>
-              <div
-                class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
-              >
+              <div class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right" >
               </div>
             </div>
           </div>
