@@ -1,5 +1,6 @@
 <script>
 import Button from '../reusable/Button.vue';
+import submitForm from  '../../utilities/formSubmission'
 
 export default {
   components: { Button },
@@ -13,12 +14,30 @@ export default {
       },
     };
   },
-  methods: {
-    submitForm() {
-      console.log('Form data:', this.formData);
+   methods: {
+    async onSubmit() {
+      const { name, email, subject, message } = this.formData
+      try {
+        await submitForm({
+          name,
+          email,
+          subject,
+          message
+        })
+        this.resetForm()
+      } catch (error) {
+        console.error(error)
+      }
     },
-  },
-};
+
+    resetForm() {
+      this.formData.name = ''
+      this.formData.email = ''
+      this.formData.subject = ''
+      this.formData.message = ''
+    }
+  }
+}
 </script>
 
 <template>
@@ -27,7 +46,7 @@ export default {
       <p class="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
         Contact Form
       </p>
-      <form @submit.prevent="submitForm" class="font-general-regular space-y-7">
+      <form @submit.prevent="onSubmit" class="font-general-regular space-y-7">
         <input
           label="Full Name"
           v-model="formData.name"
@@ -36,6 +55,7 @@ export default {
           placeholder="Full Name"
           class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
           aria-label="Full Name"
+          required
         />
         <input
           label="Email"
@@ -46,6 +66,7 @@ export default {
           inputType="email"
           class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
           aria-label="Email"
+          required
         />
         <input
           label="Subject"
@@ -55,6 +76,7 @@ export default {
           placeholder="Subject"
           class="w-full px-5 py-3 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
           aria-label="Subject"
+          required
         />
         <textarea
           class="min-h-[50px] w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -64,6 +86,7 @@ export default {
           name="message"
           placeholder="Message"
           aria-label="Message"
+          required
         ></textarea>
         <div>
           <Button
