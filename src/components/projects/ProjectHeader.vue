@@ -9,7 +9,7 @@ export default {
 <template>
 	<div>
 		<div class="flex gap-8 justify-start items-center mt-14 sm:mt-20 mb-7">
-		<router-link to="/projects">
+			<router-link to="/projects">
         <button
           class="h-10 w-10 text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-full hover:text-[#6366F1] hover:bg-white duration-500 flex items-center justify-center"
           aria-label="Back"

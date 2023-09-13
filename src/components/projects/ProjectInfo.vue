@@ -15,13 +15,9 @@ export default {
 
 <template>
 	<div class="block sm:flex gap-0 sm:gap-10 mt-14">
-		<!-- Single project left section details -->
 		<div class="w-full sm:w-1/3 text-left">
-			<!-- Single project client details -->
 			<div class="mb-7">
-				<p
-						class="font-general-medium text-2xl text-secondary-dark dark:text-secondary-light mb-2"
-				>
+				<p class="font-general-medium text-2xl text-secondary-dark dark:text-secondary-light mb-2" >
 						{{ projectInfo.clientHeading }}
 				</p>
 				<ul class="leading-loose">
@@ -42,18 +38,11 @@ export default {
 				</ul>
 		</div>
 
-
-
-			<!-- Single project technologies -->
 			<div class="mb-7">
-				<p
-					class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2"
-				>
+				<p class="font-general-medium text-2xl text-ternary-dark dark:text-ternary-light mb-2" >
 					Tools and Technologies
 				</p>
-				<p
-					class="font-general-regular text-primary-dark dark:text-ternary-light"
-				>
+				<p class="font-general-regular text-primary-dark dark:text-ternary-light" >
 					{{ projectInfo.technologies && projectInfo.technologies.length ? projectInfo.technologies.join(', ') : 'No technologies specified' }}
 				</p>
 			</div>
@@ -65,28 +54,24 @@ export default {
 			>
 				Objective
 			</p>
-			<p
-					class="font-general-regular text-primary-dark dark:text-ternary-light mb-7"
-				>
-					{{ projectInfo.objectives }}
-				</p>
+			<p class="font-general-regular text-primary-dark dark:text-ternary-light mb-7" >
+				{{ projectInfo.objectives1 }}
+			</p>
+			<p class="font-general-regular text-primary-dark dark:text-ternary-light mb-7" >
+				{{ projectInfo.objectives2 }}
+			</p>
 
 			<div class="mb-7">
-				<p
-					class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7"
-				>
+				<p class="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7" >
 					Challenges
 				</p>
-				<p
-					class="font-general-regular text-primary-dark dark:text-ternary-light"
-				>
-					{{ projectInfo.challenges }}
+				<p class="font-general-regular text-primary-dark dark:text-ternary-light mb-7" >
+					{{ projectInfo.challenges1 }}
+				</p>
+				<p class="font-general-regular text-primary-dark dark:text-ternary-light mb-7" >
+					{{ projectInfo.challenges2 }}
 				</p>
 			</div>
-
 		</div>
-
-
-
 	</div>
 </template>

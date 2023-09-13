@@ -55,9 +55,13 @@ export default {
             link: project.repoLink,
           },
         ];
-        this.projectDetails.info.objectives = project.objectives;
+        this.projectDetails.info.objectives1 = project.objectives1;
+        this.projectDetails.info.objectives2 = project.objectives2;
+        this.projectDetails.info.objectives3 = project.objectives3;
+        this.projectDetails.info.challenges1 = project.challenges1;
+        this.projectDetails.info.challenges2 = project.challenges2;
+        this.projectDetails.info.challenges3 = project.challenges3;
         this.projectDetails.info.technologies = project.technologies;
-        this.projectDetails.info.challenges = project.challenges;
       }
     },
   },
