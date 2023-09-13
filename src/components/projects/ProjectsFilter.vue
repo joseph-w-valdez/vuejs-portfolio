@@ -11,7 +11,6 @@ export default {
 			default: () => [
 				'Web Application',
 				'Mobile Application',
-				'UI/UX Design',
 				'Completed',
 				'In Development',
 				'Professional Freelance',
