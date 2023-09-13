@@ -1,36 +1,6 @@
 # Vuejs & TailwindCSS Portfolio - With Dark Mode
 
-A simple portfolio starter theme built with Vue.js v3 and Tailwind CSS v3.
-
-![Vuejs-TailwindCSS-Portfolio](https://user-images.githubusercontent.com/16396664/140909796-815239e4-a986-46ad-bbd0-4b166127bbb8.JPG)
-
-## Demo URL
-
-[https://vuejs-tailwindcss-portfolio.netlify.com](https://vuejs-tailwindcss-portfolio.netlify.com)
-
-## Other versions of this project
-
--   Nuxt.js Version: [https://github.com/realstoman/nuxtjs-tailwindcss-portfolio](https://github.com/realstoman/nuxtjs-tailwindcss-portfolio)
--   React Version: [https://github.com/realstoman/react-tailwindcss-portfolio](https://github.com/realstoman/react-tailwindcss-portfolio)
--   Next.js Version: [https://github.com/realstoman/nextjs-tailwindcss-portfolio](https://github.com/realstoman/nextjs-tailwindcss-portfolio)
-
-## Features
-
--   Simple and responsive design
--   [Vue.js v3](https://vuejs.org) with [Vue Router](https://router.vuejs.org)
--   [Tailwind CSS v3](https://tailwindcss.com)
--   Theme Switcher with Dark Mode
--   Composition API
--   Vue transitions
--   Reusable Components
--   Auto Counter
--   Projects filter by category
--   Projects filter by search
--   Projects carousel
--   Vue.js smooth scroll
--   Dynamic forms
--   Scroll to top button
--   Download file button
+![portfolio-showcase](https://github.com/joseph-w-valdez/vuejs-portfolio/assets/117682160/4b251f56-ba0f-47fe-9d09-806d333c3f70)
 
 ### To Contribute to this project, read the [Contribution Guidlines](https://github.com/realstoman/vuejs-tailwindcss-portfolio/blob/main/CONTRIBUTING.md)
 
