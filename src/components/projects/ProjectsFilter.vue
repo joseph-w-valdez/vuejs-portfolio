@@ -10,6 +10,7 @@ export default {
 			type: Array,
 			default: () => [
 				'Web Application',
+				'Web Extension',
 				'Mobile Application',
 				'Completed',
 				'In Development',

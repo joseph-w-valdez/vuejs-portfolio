@@ -47,7 +47,7 @@ const projects = [
 		objectives2: "This project served as the final milestone in my web development program, encapsulating the culmination of my learning journey. Over the course of one week, I dedicated myself to in-depth research on the chosen technologies and independently implemented them. The key objective was to create a functional and secure web application that not only met the requirements but also demonstrated my proficiency in web development. One of the highlights of this project was the integration of user authentication and authorization mechanisms powered by JSON Web Tokens and Argon2 password hashing. The end goal was to present this application not only to my class but also to a broader audience within the institution, showcasing my growth and skills as a web developer.",
 		challenges1: "Developing this dynamic web application posed several challenges, particularly in integrating various technologies seamlessly. One notable hurdle was the coordination between the frontend and backend components to ensure smooth data flow and user interactions. This required a deep understanding of React, React Router, and state management, as well as effective communication between frontend and backend using Axios for HTTP requests. Additionally, implementing user authentication and authorization with JSON Web Tokens and Argon2 password hashing demanded rigorous attention to security practices, ensuring user data remained protected.",
 		challenges2: "The time constraint of one week for this final project presented its own set of challenges. The compressed timeline required intensive research, rapid decision-making, and efficient implementation. Learning and applying new technologies, such as Multer for file uploads and pg as the PostgreSQL client library, within this timeframe was a demanding task. Moreover, creating a user-friendly and aesthetically pleasing frontend with Tailwind CSS while ensuring it seamlessly interacted with the backend was a challenge in design and development synchronization. Despite these challenges, the project served as a valuable test of my ability to learn and adapt quickly, which is a crucial skill in the ever-evolving field of web development.",
-		technologies: ['JavaScript ES6', 'Node.js', 'Express.js', 'Tailwind CSS', 'Axios', 'Multer', 'PostgreSQL'],
+		technologies: ['React', 'Node.js', 'Express.js', 'Tailwind CSS', 'Axios', 'Multer', 'PostgreSQL'],
 		images: [
 			require('@/assets/images/marvelous-1.gif'),
 			require('@/assets/images/marvelous-2.gif'),
@@ -74,6 +74,25 @@ const projects = [
 	},
 	{
 		id: 5,
+		title: 'DuelingBookEnhanced',
+		date: '9/2023',
+		categories: ['Web Extension', 'Completed', 'Collaboration Project'],
+		thumbnail: require('@/assets/images/duelingbookenhanced-logo.gif'),
+		liveLink: null,
+		repoLink: 'https://github.com/alexjraymond/DuelingBookEnhanced',
+		objectives1: "The Dueling Book Enhanced project aims to significantly improve the user experience on DuelingBook by providing a Chrome extension that streamlines gameplay. The most prominent feature is the implementation of convenient hotkeys, empowering users to effortlessly execute various in-game actions. These actions include viewing their graveyard, main deck, or extra deck, as well as swiftly sending cards to specific zones for activation, retrieval, or discarding. Additionally, the extension offers features like a dark mode for enhanced visual comfort and automatic intro movie skipping. By enhancing the core functionalities of DuelingBook, this project seeks to make online dueling more efficient and enjoyable for its users.",
+		objectives2: "Another key objective is to ensure seamless accessibility for its users. This Chrome extension is designed to simplify the user interface and save time during gameplay. With features like auto-connect, users can effortlessly log in and connect to the main menu or the last screen they were on. By automating these processes, the project aims to eliminate unnecessary clicks and waiting times, thus enhancing the overall efficiency of the DuelingBook platform. Through these objectives, the project strives to make dueling more convenient and enjoyable for both new and experienced users.",
+		challenges1: "One of the primary challenges encountered during the development of the Dueling Book Enhanced project was the need to delve into the intricacies of working with webpack and building a browser extension. Given that the project hinges on the creation of a Chrome extension, it necessitated a comprehensive understanding of webpack to ensure the extension's compatibility and stability across various browsers and withstand the ever-evolving landscape of DuelingBook updates. ",
+		challenges2: "Another challenge is community engagement and user adoption. While the extension offers valuable enhancements to the DuelingBook platform, attracting users and building a supportive community around the project can be challenging. Effective communication and promotion of the extension's features and benefits are essential to encourage users to install and use it. Additionally, user feedback is vital for ongoing development and improvement, but encouraging users to provide feedback and actively participate in the project's development can be a hurdle. Striking a balance between addressing user requests and maintaining the project's vision presents a continuous challenge for the development team. ",
+		technologies: ['React', 'TypeScript', 'Web Extension', 'Tailwind', 'Webpack', 'css loader', 'file loader'],
+		images: [
+			require('@/assets/images/duelingbookenhanced-1.gif'),
+			require('@/assets/images/duelingbookenhanced-2.gif'),
+			require('@/assets/images/duelingbookenhanced-3.gif'),
+		],
+	},
+	{
+		id: 6,
 		title: 'ChatApp',
 		date: '8/2023',
 		categories: ['Mobile Application', 'Completed', 'Collaboration Project'],
@@ -83,7 +102,7 @@ const projects = [
 		objectives1: "The central objective of this project was to develop a real-time chat application that facilitated seamless communication among users across various platforms. Our primary goal was to create a user-friendly messaging experience that transcended device boundaries, emphasizing privacy and security as paramount principles. This endeavor sought to provide users with a versatile, cross-platform messaging solution that prioritized their communication needs while safeguarding their data.",
 		objectives2: "Collaborating with a friend in a hack-a-thon format over the span of 2 days, we undertook the challenge of learning the basics of React Native to demonstrate our ability to communicate, coordinate, and integrate as web developers with the mobile development team. The primary focus was to gain proficiency in React Native and its unique characteristics, enabling us to bridge the gap between web and mobile development. This objective was not only about developing the chat application but also about expanding our skillset and showcasing our adaptability as developers capable of working across different platforms.",
 		challenges1:"One of the central challenges in this project was delving into the world of React Native, which presented a unique set of hurdles as we transitioned from web development to mobile application development. Adapting our web development skills to the mobile environment while understanding the idiosyncrasies of React Native architecture was a significant learning curve. Balancing our familiarity with React against the intricacies of React Native was essential to demonstrate our capability to bridge the gap between web and mobile development. This challenge required us to rapidly acquire new knowledge and adapt our coding practices to showcase our ability to deliver a robust chat application for potential seamless integration with mobile platforms.",
-		technologies: ['React Native', 'Firebase', 'Socket.io'],
+		technologies: ['React Native', 'React','Firebase', 'Socket.io'],
 		images: [
 			require('@/assets/images/chatApp-1.gif'),
 		],

@@ -25,13 +25,13 @@ export default {
 				},
 				{
 					id: 2,
-					value: 'mobile',
-					name: 'Mobile Application',
+					value: 'extension',
+					name: 'Web Extenions',
 				},
 				{
 					id: 3,
-					value: 'ui-ux',
-					name: 'UI/UX Design',
+					value: 'mobile',
+					name: 'Mobile Application',
 				},
 			],
 		};
