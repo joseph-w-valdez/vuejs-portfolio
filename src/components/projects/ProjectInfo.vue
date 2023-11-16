@@ -29,7 +29,7 @@ export default {
 								<span class="block text-base italic">{{ info.title }}: </span>
 								<!-- Render a <p> if the link is unavailable, otherwise render an <a> tag for linking-->
 								<template v-if="info.link">
-									<a :href="info.link" class="hover:underline cursor-pointer block text-md" aria-label="Project Website and Repository" target="__blank" rel="noopener noreferrer">{{ info.link }}</a>
+									<a :href="info.link" class="hover:underline cursor-pointer block text-md overflow-hidden truncate" aria-label="Project Website and Repository" target="__blank" rel="noopener noreferrer">{{ info.link }}</a>
 								</template>
 								<template v-else>
 									<p class="text-md">None Available</p>
