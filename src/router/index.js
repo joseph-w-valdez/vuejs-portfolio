@@ -24,6 +24,15 @@ const routes = [
 		},
 	},
 	{
+		path: '/experience',
+		name: 'Experience',
+		component: () =>
+			import('../views/Experience.vue'),
+		meta: {
+			title: 'Joseph Valdez - Professional Experience',
+		},
+	},
+	{
 		path: '/projects',
 		name: 'Projects',
 		component: () =>
