@@ -13,7 +13,7 @@ export default {
 				{
 					id: 1,
 					bio:
-						"I am a software engineer in Southern California. I'd love to contribute to any projects and applications that have a positive impact on the community.",
+						"I am a Software Engineer Technical Lead in Southern California. I'd love to contribute to any projects and applications that have a positive impact on the community.",
 				},
 				{
 					id: 2,
@@ -23,7 +23,7 @@ export default {
 				{
 					id: 3,
 					bio:
-						"After months of soul-searching, self-studying, and research into the field, I decided to delve into it further and immerse myself in a boot camp program, and I have continued loving it since!",
+						"After months of soul-searching, self-studying, and research into the field, I decided to delve into it further and immerse myself in a boot camp program, and I have continued loving it since! Through hands-on experience building cross-platform browser extensions, leading AI integration projects, and architecting systems for millions of users, I rapidly developed from a junior engineer into a Technical Lead role.",
 				},
 				{
 					id: 4,

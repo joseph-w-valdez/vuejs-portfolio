@@ -1,6 +1,7 @@
 <script>
 import AppBanner from '@/components/shared/AppBanner';
 import ProjectsGrid from '../components/projects/ProjectsGrid.vue';
+import ExperiencePreview from '../components/experience/ExperiencePreview.vue';
 /* import Button from '../components/reusable/Button.vue'; */
 
 export default {
@@ -8,6 +9,7 @@ export default {
 	components: {
 		AppBanner,
 		ProjectsGrid,
+		ExperiencePreview,
 	},
 };
 </script>
@@ -15,6 +17,7 @@ export default {
 <template>
 	<div class="container mx-auto">
 		<AppBanner class="mb-5 sm:mb-8" />
+		<ExperiencePreview class="mb-10 sm:mb-16" />
 		<ProjectsGrid />
 		<!-- note to self: re-enable when there are more than 6 projects and to limit the grid to show only 6 projects on the home view only -->
 		<!-- <div class="mt-10 sm:mt-20 flex justify-center">

@@ -82,8 +82,8 @@ export default {
 </script>
 
 <template>
-	<nav id="nav" class="sm:container sm:mx-auto">
-		<div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6" >
+	<nav id="nav" class="sticky top-0 z-50 bg-secondary-light/95 dark:bg-primary-dark/95 backdrop-blur-sm sm:container sm:mx-auto border-b border-gray-200/50 dark:border-gray-800/50">
+		<div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-4 sm:py-6" >
 			<div class="flex justify-between items-center px-4 sm:px-0">
 				<div>
 					<router-link to="/"
@@ -165,6 +165,11 @@ export default {
 </template>
 
 <style scoped>
+#nav {
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
 #nav a.router-link-exact-active {
 	@apply text-indigo-700;
 	@apply dark:text-indigo-400;
