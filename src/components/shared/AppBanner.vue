@@ -3,9 +3,10 @@ import feather from 'feather-icons';
 
 export default {
 	name: 'Home',
-	data: () => {
+		data: () => {
 		return {
 			theme: '',
+			linkedInUrl: 'https://www.linkedin.com/in/joseph-w-valdez',
 		};
 	},
 	created() {
@@ -51,13 +52,15 @@ export default {
 			</div>
 			<div class="flex justify-center sm:block">
 				<a
-					href="/contact"
+					:href="linkedInUrl"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
-					aria-label="Contact Me"
+					aria-label="Let's Connect!"
 				>
 					<span
 						class="text-sm sm:text-lg font-general-medium duration-100"
-						>Contact Me!</span
+						>Let's Connect!</span
 					></a
 				>
 			</div>

@@ -32,7 +32,7 @@ export default {
 			<div class="flex-1 bg-secondary-light dark:bg-ternary-dark rounded-xl shadow-lg border-l-4 border-indigo-500 dark:border-indigo-400 p-6 sm:p-8 experience-card-shadow">
 				<!-- Header -->
 				<div class="mb-8">
-					<div class="flex flex-wrap items-baseline gap-3 mb-3">
+					<div class="flex flex-wrap items-center justify-between gap-3 mb-3">
 						<h3 class="font-general-semibold text-2xl sm:text-3xl text-ternary-dark dark:text-ternary-light">
 							{{ experience.position }}
 						</h3>
@@ -51,17 +51,17 @@ export default {
 					<div
 						v-for="(achievement, index) in experience.achievements"
 						:key="index"
-						class="achievement-block bg-white/50 dark:bg-gray-800/30 rounded-lg p-5 border border-indigo-100 dark:border-indigo-900/30"
+						class="achievement-block bg-white/50 dark:bg-gray-800/30 rounded-lg p-5 border border-indigo-100 dark:border-indigo-900/30 text-left"
 					>
 						<h4 class="font-general-semibold text-lg text-ternary-dark dark:text-ternary-light mb-4 flex items-center gap-2">
 							<span class="flex-shrink-0 w-2 h-2 rounded-full bg-indigo-500 dark:bg-indigo-400"></span>
 							{{ achievement.title }}
 						</h4>
-						<ul class="space-y-2.5 font-general-regular ml-4">
+						<ul class="space-y-2.5 font-general-regular ml-4 text-left">
 							<li
 								v-for="(desc, descIndex) in achievement.description"
 								:key="descIndex"
-								class="text-base leading-relaxed text-gray-700 dark:text-gray-300"
+								class="text-base leading-relaxed text-gray-700 dark:text-gray-300 text-left"
 							>
 								<span class="text-indigo-500 dark:text-indigo-400 mr-2">•</span>{{ desc }}
 							</li>

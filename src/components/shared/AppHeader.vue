@@ -1,39 +1,18 @@
 <script>
 import ThemeSwitcher from '../ThemeSwitcher';
-import HireMeModal from '../HireMeModal.vue';
 import feather from 'feather-icons';
 import AppHeaderLinks from './AppHeaderLinks.vue';
-import Button from '../reusable/Button.vue';
 
 export default {
 	components: {
 		ThemeSwitcher,
-		HireMeModal,
 		AppHeaderLinks,
-		Button,
 	},
 	data() {
 		return {
 			isOpen: false,
 			theme: '',
-			modal: false,
-			categories: [
-				{
-					id: 1,
-					value: 'web',
-					name: 'Web Application',
-				},
-				{
-					id: 2,
-					value: 'extension',
-					name: 'Web Extenions',
-				},
-				{
-					id: 3,
-					value: 'mobile',
-					name: 'Mobile Application',
-				},
-			],
+			linkedInUrl: 'https://www.linkedin.com/in/joseph-w-valdez',
 		};
 	},
 
@@ -54,20 +33,6 @@ export default {
 	methods: {
     updateTheme(theme) {
       this.theme = theme;
-    },
-    showModal() {
-      if (this.modal) {
-        // Stop screen scrolling
-        document
-          .getElementsByTagName('html')[0]
-          .classList.remove('overflow-y-hidden');
-        this.modal = false;
-      } else {
-        document
-          .getElementsByTagName('html')[0]
-          .classList.add('overflow-y-hidden');
-        this.modal = true;
-      }
     },
     closeMenuOnClickAway(event) {
       if (this.isOpen && !this.$refs.hamburger.contains(event.target)) {
@@ -138,15 +103,18 @@ export default {
 				</div>
 			</div>
 
-			<AppHeaderLinks :showModal="showModal" :isOpen="isOpen" />
+			<AppHeaderLinks :linkedInUrl="linkedInUrl" :isOpen="isOpen" />
 			<div class="hidden sm:flex justify-between items-center flex-col md:flex-row" >
 				<div class="hidden md:block">
-					<Button
-						title="Hire Me"
-						class="text-md font-general-medium bg-indigo-500 hover:bg-primary-light text-white hover:text-[#6366F1] shadow-sm rounded-md px-5 py-2.5 duration-500"
-						@click="showModal()"
-						aria-label="Hire Me Button"
-					/>
+					<a
+						:href="linkedInUrl"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-md font-general-medium bg-indigo-500 hover:bg-primary-light text-white hover:text-[#6366F1] shadow-sm rounded-md px-5 py-2.5 duration-500 inline-block"
+						aria-label="LinkedIn Profile"
+					>
+						Let's Connect!
+					</a>
 				</div>
 				<theme-switcher
 					:theme="theme"
@@ -155,12 +123,6 @@ export default {
 				/>
 			</div>
 		</div>
-		<HireMeModal
-			:showModal="showModal"
-			:modal="modal"
-			:categories="categories"
-			aria-modal="Hire Me Modal"
-		/>
 	</nav>
 </template>
 

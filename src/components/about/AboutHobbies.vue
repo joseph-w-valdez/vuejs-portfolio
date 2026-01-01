@@ -5,8 +5,8 @@
   <div class="flex flex-col-reverse gap-8 md:flex-row">
     <div class="w-full md:w-2/3 flex-col md:flex md:gap-10 md:mt-20 text-center justify-center">
       <p class="font-general-regular mb-4 text-ternary-dark dark:text-ternary-light text-lg">
-        Outside of the world of coding, I find joy and creative expression through digital art. It's a realm where I can let my imagination run wild,
-        experimenting with colors, shapes, and visual storytelling. Whether it's creating vibrant illustrations or diving into more intricate digital paintings, I relish
+        Outside of the world of coding, I find joy and creative expression through both physical and digital mediums. It's a realm where I can let my imagination run wild,
+        experimenting with colors, shapes, and visual storytelling. Whether it's creating vibrant illustrations, diving into more intricate digital paintings, or creating hand-crafted dioramas, I relish
         the process of bringing my ideas to fruition. This artistic side of me provides a welcome balance to the logical and analytical nature of coding, and
         it's in this fusion of creativity and technology that I discover a sense of fulfillment and self-expression.
       </p>
