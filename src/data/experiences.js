@@ -80,9 +80,9 @@ const experiences = [
 				],
 			},
 			{
-				title: 'Accessibility (ADA / WCAG 2.1 AA) Compliance for Citi',
+				title: 'Accessibility (ADA / WCAG 2.1 AA) Compliance for Citi Bank',
 				description: [
-					'Implemented accessibility remediation for Citi partner extensions in collaboration with TPGI auditors, addressing WCAG 2.1 AA violations across semantics, keyboard navigation, focus management, and screen reader behavior.',
+					'Implemented accessibility remediation for Citi Bank partner extensions in collaboration with TPGI auditors, addressing WCAG 2.1 AA violations across semantics, keyboard navigation, focus management, and screen reader behavior.',
 					'Evaluated auditor recommendations, identified incorrect or incomplete guidance, and proposed alternative implementations based on independent research and practical testing.',
 					'Coordinated directly with TPGI, product management, client success, and engineering leadership to review findings, validate solutions, and align on corrected accessibility approaches.',
 					'Advocated for improved accessibility testing practices by introducing physical devices for validation, replacing simulator-only testing to ensure real-world compliance.',
