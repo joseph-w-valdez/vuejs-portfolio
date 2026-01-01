@@ -105,7 +105,7 @@ export default {
 						<div class="pt-4 border-t border-indigo-100 dark:border-indigo-900/30">
 							<router-link
 								to="/experience"
-								class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium text-sm"
+								class="inline-flex items-center justify-center bg-indigo-500 hover:bg-primary-light text-white hover:text-[#6366F1] font-general-medium text-md px-4 py-2.5 rounded-md shadow-sm duration-500"
 							>
 								View full experience details
 								<i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>

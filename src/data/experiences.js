@@ -11,7 +11,7 @@ const experiences = [
 			{
 				title: 'Cross-Platform Extension Architecture & Leadership',
 				description: [
-					'Led frontend architecture across three distinct runtime environments — Chrome Extensions, Desktop Safari, and iOS Safari. Ensured consistent behavior, predictable performance, and partner-aligned experiences across platforms that traditionally diverge heavily in APIs, lifecycle behavior, and security constraints.',
+					'Led cross-platform extension architecture across Chrome, Safari, and iOS, serving 2M+ users across 20+ partner brands. Architected AI integration systems for ChatGPT, Gemini, and Claude, and provided technical leadership across multiple teams.',
 					'Coordinated with backend, QA, PM, and product design to define specifications, reduce ambiguity, and guide features from exploration → planning → delivery.',
 					'Provided architectural oversight and senior code reviews across multiple teams, promoting code clarity, shared patterns, and maintainable systems.',
 				],
@@ -20,24 +20,44 @@ const experiences = [
 				title: 'AI Conversation Page (AICP) Injection System',
 				description: [
 					'Architected and led development of AICP, enabling Wildfire\'s cashback ecosystem to function inside major AI platforms such as ChatGPT, Gemini, and Claude.',
-					'Built product-entity detection and decoration logic adapted for AI chat interfaces rather than traditional SERPs.',
+					'Built product-entity detection and decoration logic adapted for AI chat interfaces rather than traditional search engine results pages (SERPs).',
 					'Implemented automated cashback activation flows compatible with diverse partner requirements.',
 					'Integrated AICP into shared extension templates to ensure rapid adoption across partner extensions with minimal integration overhead.',
 					'Designed with remote configuration controls to enable updates without client-side releases.',
 				],
 			},
 			{
-				title: 'Host App Authentication Flows (Swift + Safari Web Extension Handler)',
+				title: 'Cross-Platform Template Rebuild & Parity Enforcement',
 				description: [
-					'Contributed Swift and extension-handler logic enabling automated login across Citi\'s iOS application and the Safari Web Extension.',
-					'Designed secure cross-process communication between host app ↔ extension.',
-					'Reduced friction during activation and ensured authentication reliability across devices and app states.',
+					'Rebuilt shared Chrome, Safari, and iOS extension templates to eliminate multiple years of drift and inconsistent behavior and design principles.',
+					'Improved code parity across platforms, reduced bugs caused by divergence, and simplified onboarding for new engineers.',
+					'Enabled features to be implemented once and deployed consistently across all supported environments.'
+				],
+			},
+			{
+				title: 'Data-Driven Deployment System',
+				description: [
+					'Architected and implemented a data-driven deployment system to enable rapid, remote, and personalized updates across browser extensions without requiring frequent client releases.',
+					'Identified structural limitations in existing deployment workflows, where multi-platform client releases introduced delays, risk, and operational friction, especially for partner-facing features.',
+					'Researched and evaluated architectural approaches under browser security, CSP, and platform constraints, assessing tradeoffs between flexibility, safety, and long-term maintainability.',
+					'Designed the system to safely render remotely-defined HTML and CSS, incorporating sanitization, caching strategies, and controlled update surfaces to meet Chrome Web Store and App Store requirements.',
+					'Coordinated architectural direction with executive leadership and cross-functional teams, aligning risk tolerance, rollout strategy, and long-term platform goals.',
+					'Laid the foundation for future capabilities, including faster iteration cycles, targeted personalization, and reduced dependency on store-based release timelines.',
+				],
+			},
+			{
+				title: 'Host App Authentication Flows',
+				description: [
+					'Implemented secure authentication flows between a native iOS host app and the Safari Web Extension Handler to support automatic user login.',
+					'Designed and implemented reliable cross-process communication in Swift between the host app and extension, accounting for lifecycle boundaries, app state changes, and failure modes.',
+					'Reduced user friction during activation while ensuring authentication correctness across devices, sessions, and extension states.',
 				],
 			},
 			{
 				title: 'AI-Assisted Engineering Practices',
 				description: [
-					'Used Claude, Cursor, and Copilot as amplification tools — not replacements — to evaluate design approaches, stress-test architectural decisions, and improve development velocity while maintaining full ownership of correctness and system integrity.',
+					'Used AI tools such as Claude, Cursor, ChatGPT, and Copilot to evaluate design approaches, explore implementation options, and accelerate iteration during development.',
+					'Maintained full ownership of correctness, security, and architectural decisions by treating AI output as input for reasoning rather than authoritative solutions.',
 				],
 			},
 		],
@@ -62,33 +82,19 @@ const experiences = [
 			{
 				title: 'Accessibility (ADA / WCAG 2.1 AA) Compliance for Citi',
 				description: [
-					'Executed full accessibility remediation in partnership with TPGI auditors, resolving issues across:',
-					'semantic structure',
-					'keyboard navigation',
-					'aria-live and announcement behavior',
-					'focus movement and trap prevention',
-					'screen reader interaction patterns',
-					'This effort established reusable accessible patterns now shared across partner templates.',
+					'Implemented accessibility remediation for Citi partner extensions in collaboration with TPGI auditors, addressing WCAG 2.1 AA violations across semantics, keyboard navigation, focus management, and screen reader behavior.',
+					'Evaluated auditor recommendations, identified incorrect or incomplete guidance, and proposed alternative implementations based on independent research and practical testing.',
+					'Coordinated directly with TPGI, product management, client success, and engineering leadership to review findings, validate solutions, and align on corrected accessibility approaches.',
+					'Advocated for improved accessibility testing practices by introducing physical devices for validation, replacing simulator-only testing to ensure real-world compliance.',
+					'Established improved accessibility patterns and standards that informed subsequent partner implementations and template updates.',
 				],
 			},
-			{
-				title: 'Cross-Platform Template Rebuild & Parity Enforcement',
-				description: [
-					'Rebuilt shared Chrome/Safari/iOS extension templates to eliminate years of drift and inconsistent behaviors. This work:',
-					'dramatically improved code parity',
-					'reduced bugs caused by platform divergence',
-					'simplified onboarding for new engineers',
-					'enabled future features to be implemented once and deployed everywhere',
-					'(This is the foundation that later enabled the DSL/SSR system.)',
-				],
-			},
+			
 			{
 				title: 'CI/CD & Release Automation',
 				description: [
-					'Maintained and expanded GitHub Actions CI/CD pipelines:',
-					'improved reliability and repeatability of builds',
-					'standardized release behavior across partner repos',
-					'introduced monorepo tooling for safer, synchronized deployments',
+					'Maintained and expanded GitHub Actions pipelines to improve build reliability, standardize release behavior, and reduce deployment risk across partner repositories.',
+					'Introduced monorepo tooling and coordinated release workflows to support safer, synchronized deployments across multiple extensions.',
 				],
 			},
 		],

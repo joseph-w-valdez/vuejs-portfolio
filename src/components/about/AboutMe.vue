@@ -13,22 +13,22 @@ export default {
 				{
 					id: 1,
 					bio:
-						"I am a Software Engineer Technical Lead in Southern California. I'd love to contribute to any projects and applications that have a positive impact on the community.",
+						"I’m a Software Engineer Technical Lead based in Southern California, focused on building reliable, maintainable systems in high-constraint environments. I’m especially drawn to projects that prioritize long-term impact, accessibility, and correctness.",
 				},
 				{
 					id: 2,
 					bio:
-						"Before entering the tech industry, I worked in the healthcare field for several years. Over this time, I gained a strong work ethic, with great admiration for the strong teamwork, coordination, and problem-solving that it entailed. I was introduced to the software development world by friends who suggested it due to its similarities to the medical field in the ways that I loved it.",
+						"Before working in software, I spent several years in healthcare, where I developed a strong appreciation for teamwork, coordination, and problem-solving under real-world constraints. That background continues to shape how I approach engineering, particularly when systems need to be predictable, safe, and user-centered.",
 				},
 				{
 					id: 3,
 					bio:
-						"After months of soul-searching, self-studying, and research into the field, I decided to delve into it further and immerse myself in a boot camp program, and I have continued loving it since! Through hands-on experience building cross-platform browser extensions, leading AI integration projects, and architecting systems for millions of users, I rapidly developed from a junior engineer into a Technical Lead role.",
+						"In my current work, I’ve contributed to and led efforts spanning cross-platform browser extensions, AI-powered integrations, accessibility remediation, and deployment architecture supporting millions of users. I enjoy solving complex problems with thoughtful teams and working on systems that need to hold up over time.",
 				},
 				{
 					id: 4,
 					bio:
-						"I'm excited to keep moving forward in this industry and solving problems with a like-minded group of teammates and continuing this path of ongoing growth!",
+						"I’m motivated by ongoing learning and thoughtful experimentation, especially when it leads to systems that are reliable, responsible, and built to last.",
 				},
 			],
 		};
